@@ -2,7 +2,7 @@
 
 SYSNAME=roadf
 
-eval `jtcfgstr -target=mist -output=bash -core $SYSNAME`
+# eval `jtcfgstr -target=mist -output=bash -core $SYSNAME`
 
 # PROM_ONLY="-d JTFRAME_DWNLD_PROM_ONLY"
 OTHER=

@@ -15,7 +15,7 @@ sdram:
           # 32-bit buses are indexed like
           # scr_addr[13:1], the LSB (index 0)
           # is always zero
-          addr_width: 15
+          addr_width: 17
           data_width: 32
           offset: SCR_OFFSET
           cs: LVBL
