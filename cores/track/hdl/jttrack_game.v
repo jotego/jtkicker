@@ -81,12 +81,12 @@ wire        snd_cen, psg_cen;
 
 wire        m2s_irq, m2s_data;
 wire        main_pause;
+wire        is_scr, is_obj;
 
 assign { dipsw_b, dipsw_a } = dipsw[15:0];
-assign dip_flip = ~flip;
+assign dip_flip   = ~flip;
 assign main_pause = dip_pause & ~ioctl_ram;
-
-wire        is_scr, is_obj;
+assign pcm_cs     = 1;
 
 assign is_scr   = ioctl_addr[21:0] >= SCR_START && ioctl_addr[21:0]<OBJ_START;
 assign is_obj   = ioctl_addr[21:0] >= OBJ_START && ioctl_addr[21:0]<PCM_START;

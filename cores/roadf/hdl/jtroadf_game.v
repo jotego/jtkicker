@@ -93,6 +93,7 @@ reg         is_hyper=0;
 
 assign is_scr   = ioctl_addr[21:0] >= SCR_START && ioctl_addr[21:0]<OBJ_START;
 assign is_obj   = ioctl_addr[21:0] >= OBJ_START && ioctl_addr[21:0]<PCM_START;
+assign pcm_cs   = 1;
 
 always @(*) begin
     post_data = prog_data;
