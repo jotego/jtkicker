@@ -1,2 +1,6 @@
 # unencrypted CPU not supported (would require a different RBF)
 # trackldu
+# roadfu
+
+# Unsupported bootlegs
+# shaolinb
