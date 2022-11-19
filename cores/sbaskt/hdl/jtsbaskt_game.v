@@ -17,44 +17,7 @@
     Date: 11-11-2021 */
 
 module jtsbaskt_game(
-    input           rst,
-    input           clk,
-    input           rst24,
-    input           clk24,
-    output          pxl2_cen,   // 12   MHz
-    output          pxl_cen,    //  6   MHz
-    output   [3:0]  red,
-    output   [3:0]  green,
-    output   [3:0]  blue,
-    output          LHBL,
-    output          LVBL,
-    output          HS,
-    output          VS,
-    // cabinet I/O
-    input   [ 1:0]  start_button,
-    input   [ 1:0]  coin_input,
-    input   [ 6:0]  joystick1,
-    input   [ 6:0]  joystick2,
-    // DIP switches
-    input   [31:0]  status,     // only bits 31:16 are looked at
-    input   [31:0]  dipsw,
-    input           dip_pause,
-    input           service,
-    inout           dip_flip,
-    input           dip_test,
-    input   [ 1:0]  dip_fxlevel, // Not a DIP on the original PCB
-    // Sound output
-    output  signed [15:0] snd,
-    output          sample,
-    output          game_led,
-    input           enable_psg,
-    input           enable_fm,
-    // Debug
-    input   [ 3:0]  gfx_en,
-    input   [ 7:0]  debug_bus,
-    output  [ 7:0]  debug_view,
-    // Ports
-    `include "mem_ports.inc"
+    `include "jtframe_game_ports.inc" // see $JTFRAME/hdl/inc/jtframe_game_ports.inc
 );
 
 localparam [21:0] SCR_START = `SCR_START,
@@ -68,7 +31,8 @@ wire        obj_frame;
 wire        cpu_cen, cpu4_cen;
 wire        cpu_rnw, cpu_irqn, cpu_nmin;
 wire        vscr_cs, vram_cs, objram_cs, flip;
-wire [ 7:0] vscr_dout, vram_dout, obj_dout, cpu_dout;
+wire [ 7:0] vscr_dout, vram_dout, obj_dout, cpu_dout,
+            debug_snd;
 wire        vsync60;
 wire        snd_cen, psg_cen;
 
@@ -76,6 +40,7 @@ wire        m2s_irq, m2s_data;
 
 assign { dipsw_b, dipsw_a } = dipsw[15:0];
 assign dip_flip = flip;
+always @* debug_view = debug_snd;
 
 wire [ 7:0] nc, pre_data;
 
@@ -178,7 +143,7 @@ jtsbaskt_snd u_sound(
     .snd        ( snd       ),
     .sample     ( sample    ),
     .peak       ( game_led  ),
-    .debug_view ( debug_view)
+    .debug_view ( debug_snd )
 );
 `else
     assign snd_cs=0;

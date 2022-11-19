@@ -17,44 +17,7 @@
     Date: 13-1-2022 */
 
 module jtmikie_game(
-    input           rst,
-    input           clk,
-    input           rst24,
-    input           clk24,
-    output          pxl2_cen,   // 12   MHz
-    output          pxl_cen,    //  6   MHz
-    output   [3:0]  red,
-    output   [3:0]  green,
-    output   [3:0]  blue,
-    output          LHBL,
-    output          LVBL,
-    output          HS,
-    output          VS,
-    // cabinet I/O
-    input   [ 1:0]  start_button,
-    input   [ 1:0]  coin_input,
-    input   [ 5:0]  joystick1,
-    input   [ 5:0]  joystick2,
-    // DIP switches
-    input   [31:0]  status,     // only bits 31:16 are looked at
-    input   [31:0]  dipsw,
-    input           dip_pause,
-    input           service,
-    inout           dip_flip,
-    input           dip_test,
-    input   [ 1:0]  dip_fxlevel, // Not a DIP on the original PCB
-    // Sound output
-    output  signed [15:0] snd,
-    output          sample,
-    output          game_led,
-    input           enable_psg,
-    input           enable_fm,
-    // Debug
-    input   [ 3:0]  gfx_en,
-    input   [ 7:0]  debug_bus,
-    output  [ 7:0]  debug_view,
-    // Memory ports
-    `include "mem_ports.inc"
+    `include "jtframe_game_ports.inc" // see $JTFRAME/hdl/inc/jtframe_game_ports.inc
 );
 
 // SDRAM offsets
