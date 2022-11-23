@@ -38,7 +38,7 @@ wire        vsync60;
 
 assign { dipsw_c, dipsw_b, dipsw_a } = dipsw[19:0];
 assign dip_flip = ~dipsw_c[0];
-assign debug_view = {4'hf, dipsw_c};
+always @* debug_view = {4'hf, dipsw_c};
 assign scr_cs = LVBL;
 assign pcm_cs = 1;
 

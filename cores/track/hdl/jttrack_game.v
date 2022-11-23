@@ -137,6 +137,9 @@ jttrack_main u_main(
 `endif
 
 `ifndef NOSOUND
+wire [7:0] dbg_aux;
+always @* debug_view = dbg_aux;
+
 jttrack_snd u_sound(
     .rst        ( rst       ),
     .clk        ( clk24     ),
@@ -159,7 +162,7 @@ jttrack_snd u_sound(
     .snd        ( snd       ),
     .sample     ( sample    ),
     .peak       ( game_led  ),
-    .debug_view ( debug_view)
+    .debug_view ( dbg_aux   )
 );
 `else
     assign snd_cs=0;
@@ -168,6 +171,7 @@ jttrack_snd u_sound(
     assign snd=0;
     assign sample=0;
     assign game_led=0;
+    initial debug_view = 0;
 `endif
 
 jttrack_video u_video(

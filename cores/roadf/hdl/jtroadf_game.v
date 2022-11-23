@@ -155,6 +155,9 @@ jtroadf_main u_main(
 `endif
 
 `ifndef NOSOUND
+wire [7:0] dbg_aux;
+always @* debug_view = dbg_aux;
+
 jtsbaskt_snd u_sound(
     .rst        ( rst       ),
     .clk        ( clk24     ),
@@ -177,7 +180,7 @@ jtsbaskt_snd u_sound(
     .snd        ( snd       ),
     .sample     ( sample    ),
     .peak       ( game_led  ),
-    .debug_view ( debug_view)
+    .debug_view ( dbg_aux   )
 );
 `else
     assign snd_cs=0;
@@ -186,7 +189,7 @@ jtsbaskt_snd u_sound(
     assign snd=0;
     assign sample=0;
     assign game_led=0;
-    assign debug_view=0;
+    initial debug_view=0;
 `endif
 
 jtroadf_video u_video(
