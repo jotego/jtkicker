@@ -216,6 +216,17 @@
 				"value": 0,
 				"value_off": 262144,
 				"mask": "0xFFFBFFFF"
+			},
+			{
+				"name": "Default",
+				"id": 1015,
+				"type": "number_u32",
+				"enabled": false,
+				"persist": false,
+				"writeonly": true,
+				"address": "0xfa000000",
+				"defaultval": 15736583,
+				"value": 0
 			}
 		],
 		"messages": []

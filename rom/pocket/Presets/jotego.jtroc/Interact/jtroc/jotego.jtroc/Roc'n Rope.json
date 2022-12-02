@@ -422,6 +422,17 @@
 						"value": "0x400000"
 					}
 				]
+			},
+			{
+				"name": "Default",
+				"id": 1015,
+				"type": "number_u32",
+				"enabled": false,
+				"persist": false,
+				"writeonly": true,
+				"address": "0xfa000000",
+				"defaultval": 16735126,
+				"value": 0
 			}
 		],
 		"messages": []
