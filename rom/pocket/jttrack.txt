@@ -9,7 +9,6 @@ Hyper Olympic --> hyprolym.rom
 Track & Field --> trackfld.rom
 Track & Field (Centuri) --> trackldc.rom
 
-
 These files are generated using the mra tool in:
 https://github.com/sebdel/mra-tools-c/tree/master/release
 
@@ -18,6 +17,9 @@ https://github.com/opengateware/tools-orca
 
 Check out the short tutorial in:
 https://github.com/jotego/jtbin/wiki/Analogue-Pocket-Cores
+
+There is also a video by Pixel Cherry Ninja:
+https://www.youtube.com/watch?v=PdcOtLS2KWE&t=98s
 
 DISCLAIMER: This PocketFPGA core is licensed to be used only
 with legally owned dumps of videogame data. It is also licensed

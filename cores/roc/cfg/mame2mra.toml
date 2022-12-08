@@ -5,7 +5,7 @@ platform="jtroc"
 
 [features]
 # debug=true
-beta=true
+# beta=true
 
 [parse]
 sourcefile="rocnrope.cpp"
