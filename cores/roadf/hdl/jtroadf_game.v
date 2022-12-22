@@ -156,7 +156,7 @@ jtroadf_main u_main(
 
 `ifndef NOSOUND
 wire [7:0] dbg_aux;
-always @* debug_view = dbg_aux;
+assign debug_view = dbg_aux;
 
 jtsbaskt_snd u_sound(
     .rst        ( rst       ),

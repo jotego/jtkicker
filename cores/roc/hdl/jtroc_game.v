@@ -29,6 +29,7 @@ localparam [24:0] PROM_START  =  `JTFRAME_PROM_START;
 
 wire [10:0] cpu_addr;
 wire [ 7:0] st_main;
+reg  [ 7:0] view_mux;
 
 wire        cpu_cen, cpu4_cen, ti1_cen, ti2_cen;
 wire        cpu_rnw, cpu_irqn, cpu_nmin;
@@ -43,13 +44,14 @@ wire        m2s_on;
 reg  [24:0] dwn_addr;
 
 assign dip_flip   = ~flip;
+assign debug_view = view_mux;
 
 always @(*) begin
     case( debug_bus[1:0])
-        0: debug_view = 0;
-        1: debug_view = st_main;
-        2: debug_view = snd_latch;
-        3: debug_view = st_snd;
+        0: view_mux = 0;
+        1: view_mux = st_main;
+        2: view_mux = snd_latch;
+        3: view_mux = st_snd;
     endcase
 end
 

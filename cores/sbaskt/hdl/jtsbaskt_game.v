@@ -40,7 +40,7 @@ wire        m2s_irq, m2s_data;
 
 assign { dipsw_b, dipsw_a } = dipsw[15:0];
 assign dip_flip = flip;
-always @* debug_view = debug_snd;
+assign debug_view = debug_snd;
 
 wire [ 7:0] nc, pre_data;
 
