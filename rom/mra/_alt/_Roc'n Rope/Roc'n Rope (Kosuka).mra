@@ -29,25 +29,25 @@
     <manufacturer>Konami (Kosuka license)</manufacturer>
     <players>2</players>
     <joystick>4</joystick>
-    <rotation>vertical (ccw)</rotation>
+    <rotation>vertical (cw)</rotation>
     <region>World</region>
     <mraauthor>jotego</mraauthor>
     <rom index="0" zip="rocnropek.zip|rocnrope.zip" md5="None">
-        <!-- maincpu - starts at 0x0 -->
+        <!-- maincpu - starts at 0x0 - length 0xA000 (16 bits) -->
         <part name="rnr_h1.vid" crc="0fddc1f6"/>
         <part name="rnr_h2.vid" crc="ce9db49a"/>
         <part name="rnr_h3.vid" crc="6d278459"/>
         <part name="rnr_h4.vid" crc="9b2e5f2a"/>
         <part name="rnr_h5.vid" crc="150a6264"/>
-        <!-- timeplt_audio:tpsound - starts at 0xA000 -->
+        <!-- timeplt_audio:tpsound - starts at 0xA000 - length 0x2000 (13 bits) -->
         <part name="rnr_7a.snd" crc="75d2c4e2"/>
         <part name="rnr_8a.snd" crc="ca4325ae"/>
-        <!-- gfx2 - starts at 0xC000 -->
+        <!-- gfx2 - starts at 0xC000 - length 0x4000 (14 bits) -->
         <interleave output="16">
             <part name="rnr_h12.vid" crc="e2114539" map="01"/>
             <part name="rnr_h11.vid" crc="169a8f3f" map="10"/>
         </interleave>
-        <!-- gfx1 - starts at 0x10000 -->
+        <!-- gfx1 - starts at 0x10000 - length 0x8000 (15 bits) -->
         <interleave output="16">
             <part name="rnr_a11.vid" crc="afdaba5e" map="01"/>
             <part name="rnr_a9.vid" crc="9d2166b2" map="10"/>
@@ -56,7 +56,7 @@
             <part name="rnr_a12.vid" crc="054cafeb" map="01"/>
             <part name="rnr_a10.vid" crc="aff6e22f" map="10"/>
         </interleave>
-        <!-- proms - starts at 0x18000 -->
+        <!-- proms - starts at 0x18000 - length 0x220 (10 bits) -->
         <part name="b16_prom.bin" crc="750a9677"/>
         <part name="rocnrope.pr3" crc="b5c75a27"/>
         <part name="a17_prom.bin" crc="22ad2c3e"/>

@@ -33,15 +33,15 @@
     <region>World</region>
     <mraauthor>jotego</mraauthor>
     <rom index="0" zip="roadfu.zip|roadf.zip" md5="None">
-        <!-- maincpu - starts at 0x0 -->
+        <!-- maincpu - starts at 0x0 - length 0x10000 (16 bits) -->
         <part repeat="0x4000"> FF</part>
         <part name="461_k02.g7" crc="7db4b175"/>
         <part name="461_k04.g11" crc="dda627e9"/>
         <part name="461_k06.g15" crc="91c1788b"/>
-        <!-- audiocpu - starts at 0x10000 -->
+        <!-- audiocpu - starts at 0x10000 - length 0x4000 (14 bits) -->
         <part name="461_d10.a17" crc="c33c927e"/>
         <part repeat="0x2000"> FF</part>
-        <!-- gfx2 - starts at 0x14000 -->
+        <!-- gfx2 - starts at 0x14000 - length 0xC000 (16 bits) -->
         <interleave output="16">
             <part name="a14_e26.bin" crc="f5c738e2" map="01"/>
             <part name="c14_e22.bin" crc="fbcfbeb9" map="10"/>
@@ -50,13 +50,13 @@
             <part name="a12_d24.bin" crc="2d82c930" map="01"/>
             <part name="c12_d20.bin" crc="5e0cf994" map="10"/>
         </interleave>
-        <!-- gfx1 - starts at 0x20000 -->
+        <!-- gfx1 - starts at 0x20000 - length 0x12000 (17 bits) -->
         <interleave output="16">
             <part name="j19_e14.bin" crc="16d2bcff" map="01"/>
             <part name="g19_e18.bin" crc="490685ff" map="10"/>
         </interleave>
         <part repeat="0xA000"> FF</part>
-        <!-- proms - starts at 0x32000 -->
+        <!-- proms - starts at 0x32000 - length 0x220 (10 bits) -->
         <part name="c03_c27.bin" crc="45d5e352"/>
         <part name="j12_c28.bin" crc="2955e01f"/>
         <part name="a09_c29.bin" crc="5b3b5f2a"/>

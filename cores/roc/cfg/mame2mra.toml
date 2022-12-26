@@ -2,7 +2,7 @@
 # info = [ {tag="mameversion", value="0229"} ]
 mraauthor=["jotego"]
 platform="jtroc"
-
+overrule=[ {rotate=90} ]
 [features]
 # debug=true
 # beta=true

@@ -33,7 +33,7 @@
     <region>World</region>
     <mraauthor>jotego</mraauthor>
     <rom index="0" zip="shaolinb.zip|kicker.zip" md5="None">
-        <!-- maincpu - starts at 0x0 -->
+        <!-- maincpu - starts at 0x0 - length 0x10000 (16 bits) -->
         <part repeat="0x6000"> FF</part>
         <interleave output="16">
             <part name="3.h4" crc="2598dfdd" map="12"/>
@@ -44,17 +44,17 @@
         <interleave output="16">
             <part name="5.j4" crc="654037f8" map="12"/>
         </interleave>
-        <!-- gfx1 - starts at 0x10000 -->
+        <!-- gfx1 - starts at 0x10000 - length 0x6000 (15 bits) -->
         <interleave output="16">
             <part name="7.j1" crc="d9a7cff6" map="01"/>
             <part name="6.i1" crc="ff18a7ed" map="10"/>
         </interleave>
-        <!-- gfx2 - starts at 0x16000 -->
+        <!-- gfx2 - starts at 0x16000 - length 0x8000 (15 bits) -->
         <interleave output="16">
             <part name="1.l8" crc="a79959b2" map="01"/>
             <part name="2.m8" crc="560521c7" map="10"/>
         </interleave>
-        <!-- proms - starts at 0x1E000 -->
+        <!-- proms - starts at 0x1E000 - length 0x500 (11 bits) -->
         <part name="3.k1" crc="b09db4b4"/>
         <part name="4.l1" crc="270a2bf3"/>
         <part name="5.m1" crc="83e95ea8"/>

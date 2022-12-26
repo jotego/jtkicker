@@ -9,6 +9,7 @@
 				"enabled": false,
 				"persist": false,
 				"address": "0xFF000000",
+				"defaultval": 0,
 				"value": 0
 			},
 			{
@@ -95,6 +96,7 @@
 				"enabled": true,
 				"persist": true,
 				"address": "0xfa000000",
+				"defaultval": 1,
 				"value": 0,
 				"value_off": 256,
 				"mask": "0xFFFFFEFF"
@@ -135,7 +137,7 @@
 				"enabled": true,
 				"persist": true,
 				"address": "0xfa000000",
-				"defaultval": 262144,
+				"defaultval": 0,
 				"value": 0,
 				"value_off": 262144,
 				"mask": "0xFFFBFFFF"

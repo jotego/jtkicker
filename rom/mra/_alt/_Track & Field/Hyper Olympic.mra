@@ -33,16 +33,16 @@
     <region>World</region>
     <mraauthor>jotego</mraauthor>
     <rom index="0" zip="hyprolym.zip|trackfld.zip" md5="None">
-        <!-- maincpu - starts at 0x0 -->
+        <!-- maincpu - starts at 0x0 - length 0x10000 (16 bits) -->
         <part repeat="0x6000"> FF</part>
         <part name="361-d01.a01" crc="82257fb7"/>
         <part name="361-d02.a02" crc="15b83099"/>
         <part name="361-d03.a03" crc="e54cc960"/>
         <part name="361-d04.a04" crc="d099b1e8"/>
         <part name="361-d05.a05" crc="974ff815"/>
-        <!-- audiocpu - starts at 0x10000 -->
+        <!-- audiocpu - starts at 0x10000 - length 0x2000 (13 bits) -->
         <part name="c2_d13.bin" crc="95bf79b6"/>
-        <!-- gfx2 - starts at 0x12000 -->
+        <!-- gfx2 - starts at 0x12000 - length 0xE000 (16 bits) -->
         <interleave output="16">
             <part name="361-d12.h16" crc="768bb63d" map="12"/>
         </interleave>
@@ -53,7 +53,7 @@
             <part name="h14_e10.bin" crc="c2166a5c" map="12"/>
         </interleave>
         <part repeat="0x8000"> FF</part>
-        <!-- gfx1 - starts at 0x20000 -->
+        <!-- gfx1 - starts at 0x20000 - length 0x10000 (16 bits) -->
         <interleave output="16">
             <part name="c11_d06.bin" crc="82e2185a" map="01"/>
             <part name="c13_d08.bin" crc="d9faf183" map="10"/>
@@ -63,9 +63,9 @@
             <part name="c14_d09.bin" crc="5886c802" map="10"/>
         </interleave>
         <part repeat="0x8000"> FF</part>
-        <!-- vlm - starts at 0x30000 -->
+        <!-- vlm - starts at 0x30000 - length 0x2000 (13 bits) -->
         <part name="c9_d15.bin" crc="f546a56b"/>
-        <!-- proms - starts at 0x32000 -->
+        <!-- proms - starts at 0x32000 - length 0x220 (10 bits) -->
         <part name="361b16.f1" crc="d55f30b5"/>
         <part name="361b17.b16" crc="d2ba4d32"/>
         <part name="361b18.e15" crc="053e5861"/>

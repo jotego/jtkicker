@@ -9,6 +9,7 @@
 				"enabled": false,
 				"persist": false,
 				"address": "0xFF000000",
+				"defaultval": 0,
 				"value": 0
 			},
 			{
@@ -183,6 +184,7 @@
 				"enabled": true,
 				"persist": true,
 				"address": "0xfa000000",
+				"defaultval": 0,
 				"value": 0,
 				"mask": "0xFFFFFCFF",
 				"options": [
@@ -211,6 +213,7 @@
 				"enabled": true,
 				"persist": true,
 				"address": "0xfa000000",
+				"defaultval": 0,
 				"value": 0,
 				"mask": "0xFFFFFBFF",
 				"options": [
@@ -252,6 +255,7 @@
 				"enabled": true,
 				"persist": true,
 				"address": "0xfa000000",
+				"defaultval": 0,
 				"value": 0,
 				"mask": "0xFFFFEFFF",
 				"options": [
@@ -301,6 +305,7 @@
 				"enabled": true,
 				"persist": true,
 				"address": "0xfa000000",
+				"defaultval": 1,
 				"value": 0,
 				"value_off": 32768,
 				"mask": "0xFFFF7FFF"
