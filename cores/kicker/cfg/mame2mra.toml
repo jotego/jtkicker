@@ -1,7 +1,6 @@
 [global]
 # info = [ {tag="mameversion", value="0229"} ]
 mraauthor=["jotego"]
-platform="jtkicker"
 
 [features]
 # qsound=true
@@ -11,13 +10,9 @@ platform="jtkicker"
 sourcefile="shaolins.cpp"
 
 [buttons]
-core=2 # max number of buttons supported by the core
 names=[
     { names="Kick,Jump" }
 ]
-
-[rbf]
-name="jtkicker"
 
 [dipsw]
 delete = [ "Unused", "Unknown" ]

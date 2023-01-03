@@ -10,14 +10,9 @@ mraauthor=["jotego"]
 sourcefile="sbasketb.cpp"
 
 [buttons]
-core=3 # max number of buttons supported by the core
 names=[
     { names="Bounce,Throw,Pass" }
 ]
-
-[rbf]
-name="jtsbaskt"
-dev=[ {dev="konami1", rbf="jtsbask1"} ]
 
 [dipsw]
 delete = [ "Unused", "Unknown" ]

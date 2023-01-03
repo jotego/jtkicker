@@ -1,9 +1,5 @@
 [global]
-# info = [ {tag="mameversion", value="0229"} ]
 mraauthor=["jotego"]
-
-[features]
-# debug=true
 
 [parse]
 sourcefile="trackfld.cpp"
@@ -14,9 +10,6 @@ core=3 # max number of buttons supported by the core
 names=[
     { names="Left, Centre, Right" }
 ]
-
-[rbf]
-name="jttrack"
 
 [dipsw]
 delete = [ "Unused", "Unknown" ]
@@ -31,10 +24,10 @@ rename = [
 regions = [
     { name="maincpu" },
     { name="audiocpu" },
-    { name="gfx2", no_offset=true, reverse=true, start=$SCR_START },
-    { name="gfx1", width=16, no_offset=true, start=$OBJ_START, sort_even=true },
-    { name="vlm", start=$PCM_START },
-    { name="proms", start=$JTFRAME_PROM_START },
+    { name="gfx2", no_offset=true, reverse=true, start="SCR_START" },
+    { name="gfx1", width=16, no_offset=true, start="OBJ_START", sort_even=true },
+    { name="vlm", start="PCM_START" },
+    { name="proms", start="JTFRAME_PROM_START" },
 ]
 
 order = [

@@ -9,14 +9,10 @@ mraauthor=["jotego"]
 sourcefile="hyperspt.cpp"
 
 [buttons]
-core=3 # max number of buttons supported by the core
 names=[
     { machine="roadf", names="Low gear,High gear" },
     { machine="hyperspt", names="Left button, Centre button, Right button" }
 ]
-
-[rbf]
-name="jtroadf"
 
 [dipsw]
 delete = [ "Unused", "Unknown" ]
@@ -36,11 +32,11 @@ rename = [
 regions = [
     { name="maincpu" },
     { name="audiocpu" },
-    { name="gfx2", width=16, no_offset=true, Sort_even=true, start=$SCR_START },
-    { machine="roadf", name="gfx1", width=16, no_offset=true, start=$OBJ_START },
-    { machine="hyperspt", name="gfx1", width=16, no_offset=true, start=$OBJ_START, Name_sort=["c14","c18","c13","c17","c12","c16","c11","c15"] },
-    { name="vlm", start=$PCM_START },
-    { name="proms", start=$JTFRAME_PROM_START },
+    { name="gfx2", width=16, no_offset=true, Sort_even=true, start="SCR_START" },
+    { machine="roadf", name="gfx1", width=16, no_offset=true, start="OBJ_START" },
+    { machine="hyperspt", name="gfx1", width=16, no_offset=true, start="OBJ_START", Name_sort=["c14","c18","c13","c17","c12","c16","c11","c15"] },
+    { name="vlm", start="PCM_START" },
+    { name="proms", start="JTFRAME_PROM_START" },
 ]
 
 order = [
