@@ -8,6 +8,9 @@ mraauthor=["jotego"]
 
 [parse]
 sourcefile="sbasketb.cpp"
+main="sbasketh"
+# This version only works with the unprotected set
+skip.setnames=["sbasketb","sbasketg","sbaskete"]
 
 [buttons]
 names=[
@@ -16,7 +19,6 @@ names=[
 
 [dipsw]
 delete = [ "Unused", "Unknown" ]
-# base = 16
 
 [ROM]
 # values starting with $ refer to macro definitions in the .def file

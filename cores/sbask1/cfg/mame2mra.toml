@@ -8,6 +8,7 @@ mraauthor=["jotego"]
 
 [parse]
 sourcefile="sbasketb.cpp"
+skip.setnames=["sbasketh"]
 
 [buttons]
 names=[

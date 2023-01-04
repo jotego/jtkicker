@@ -1,7 +1,6 @@
 [global]
 # info = [ {tag="mameversion", value="0229"} ]
 mraauthor=["jotego"]
-overrule=[ {rotate=90} ]
 
 [features]
 # qsound=true
