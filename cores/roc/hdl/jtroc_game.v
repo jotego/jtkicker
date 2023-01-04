@@ -28,7 +28,7 @@ localparam [21:0] SND_START   =  `SND_START,
 localparam [24:0] PROM_START  =  `JTFRAME_PROM_START;
 
 wire [10:0] cpu_addr;
-wire [ 7:0] st_main;
+wire [ 7:0] st_main, st_snd;
 reg  [ 7:0] view_mux;
 
 wire        cpu_cen, cpu4_cen, ti1_cen, ti2_cen;
