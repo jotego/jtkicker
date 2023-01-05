@@ -272,9 +272,6 @@ vlm5030_gl u_vlm(
     .i_oscen ( vlm_ceng     ),
     .i_start ( vlm_st       ),
     .i_vcu   ( 1'b0         ),
-    .i_tst1  ( 1'b0         ),
-    .o_tst2  (              ),
-    .o_tst4  (              ),
     .i_d     ( vlm_mux      ),
     .o_a     ( { pcm_nc, pcm_addr[12:0] } ),
     .o_me_l  ( vlm_me_b     ),
@@ -282,7 +279,13 @@ vlm5030_gl u_vlm(
     .o_bsy   ( vlm_bsy      ),
 
     .o_dao   (              ),
-    .o_audio ( vlm_snd      )
+    .o_audio ( vlm_snd      ),
+    // Unused test pins
+    .i_tst1  ( 1'b0         ),
+    .o_tst2  (              ),
+    .i_tst3  ( 1'b0         ),
+    .o_tst4  (              ),
+    .i_vref  ( 1'b0         )
 );
 
 jtframe_mixer #(.W0(11),.W1(10)) u_mixer(
