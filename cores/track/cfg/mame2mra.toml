@@ -4,7 +4,7 @@ mraauthor=["jotego"]
 [parse]
 sourcefile="trackfld.cpp"
 skip.bootlegs=true
-skip = { setnames=["mastkin","wizzquiz","wizzquiza","reaktor","trackfldu"] }
+skip.setnames=["mastkin","wizzquiz","wizzquiza","reaktor","trackfldu"] }
 
 [buttons]
 core=3 # max number of buttons supported by the core
