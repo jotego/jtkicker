@@ -10,7 +10,7 @@ mraauthor=["jotego"]
 sourcefile="sbasketb.cpp"
 main="sbasketh"
 # This version only works with the unprotected set
-skip.setnames=["sbasketb","sbasketg","sbaskete"]
+skip.setnames=["sbasketb","sbasketg","sbaskete","hypersptb"]
 
 [buttons]
 names=[

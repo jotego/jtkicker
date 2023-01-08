@@ -1,12 +1,9 @@
 [global]
-# info = [ {tag="mameversion", value="0229"} ]
 mraauthor=["jotego"]
-
-[features]
-# debug=true
 
 [parse]
 sourcefile="hyperspt.cpp"
+skip.bootlegs=true
 
 [buttons]
 names=[

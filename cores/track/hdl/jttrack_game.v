@@ -115,10 +115,10 @@ jttrack_main u_main(
     // NVRAM
     .clk48          ( clk           ),
     .ioctl_ram      ( ioctl_ram     ),
-    .ioctl_dout     ( ioctl_dout    ),
+    .ioctl_dout     ( prog_data     ),
     .ioctl_din      ( ioctl_din     ),
-    .ioctl_wr       ( ioctl_wr      ),
-    .ioctl_addr     ( ioctl_addr[15:0])
+    .ioctl_wr       ( prog_we       ),
+    .ioctl_addr     ( prog_addr[15:0])
 );
 `else
     assign main_cs   = 0;

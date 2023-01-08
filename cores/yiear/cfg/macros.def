@@ -2,8 +2,6 @@
 include ../../kicker/cfg/common.def
 
 CORENAME=JTYIEAR
-GAMETOP=jtyiear_game_sdram
-JTFRAME_SDRAM_BANKS
 
 VIDEO_MODULE=jtyiear_video
 MAIN_MODULE=jtyiear_main

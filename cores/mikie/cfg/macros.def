@@ -2,7 +2,6 @@
 include ../../kicker/cfg/common.def
 
 CORENAME=JTMIKIE
-GAMETOP=jtmikie_game_sdram
 JTFRAME_SDRAM_BANKS
 
 SND_START=0x10000
@@ -16,4 +15,3 @@ JTFRAME_FLIP_RESET
 
 # Video
 JTFRAME_VERTICAL
-JTFRAME_ROTCCW

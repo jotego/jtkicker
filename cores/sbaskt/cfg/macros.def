@@ -2,7 +2,7 @@
 include ../../kicker/cfg/common.def
 
 CORENAME=JTSBASKT
-GAMETOP=jtsbaskt_game_sdram
+
 JTFRAME_VERTICAL
 JTFRAME_SDRAM_BANKS
 

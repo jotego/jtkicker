@@ -171,7 +171,7 @@ always @(posedge clk, posedge rst) begin
                 dr_start <= inzone;
                 dr_attr  <= scan_dout;
                 sub_cnt  <= 0;
-                scan_st  <= done ? 0 : 5;
+                scan_st  <= done ? 3'd0 : 3'd5;
             end
             5: scan_st <= 1; // give time to dr_busy to rise
         endcase
