@@ -2,6 +2,7 @@ game:
   - from: roadf
     get:
       - jtroadf_game.v
+      - jtroadf_game_sdram.v
       - jtroadf_main.v
       - jtroadf_video.v
       - jtroadf_scroll.v
