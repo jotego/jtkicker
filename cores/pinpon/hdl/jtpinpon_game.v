@@ -39,6 +39,7 @@ wire        vsync60;
 assign { dipsw_c, dipsw_b, dipsw_a } = dipsw[18:0];
 assign dip_flip = flip;
 assign game_led= 0;
+assign debug_view= 0;
 
 wire        is_char = ioctl_addr[21:0] >= SCR_START && ioctl_addr[21:0]<OBJ_START;
 wire        is_obj  = ioctl_addr[21:0] >= OBJ_START && ioctl_addr[21:0]<PROM_START[21:0];
